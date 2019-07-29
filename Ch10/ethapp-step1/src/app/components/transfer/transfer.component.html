@@ -1,0 +1,34 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()"
+      novalidate autocomplete="off">
+  <div class="container">
+    <div class="transfer-container">
+      <div>
+        Address: {{user.address}} <br/>
+        Balance: {{user.balance}} Eth
+      </div>
+      <mat-form-field>
+        <input matInput placeholder="Transfer Address" name="transferAddress" formControlName="transferAddress"
+               maxlength="42" minlength="42" required>
+        <mat-error *ngFor="let validation of account_validation_messages.transferAddress">
+          <mat-error *ngIf="userForm.get('transferAddress').hasError(validation.type) && (userForm.get('transferAddress').dirty || userForm.get('transferAddress').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Amount" name="amount" formControlName="amount" required>
+        <mat-error *ngFor="let validation of account_validation_messages.amount">
+          <mat-error *ngIf="userForm.get('amount').hasError(validation.type) && (userForm.get('amount').dirty || userForm.get('amount').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Remarks" name="remarks" formControlName="remarks"
+               maxlength="42" required>
+        <mat-error *ngFor="let validation of account_validation_messages.remarks">
+          <mat-error *ngIf="userForm.get('remarks').hasError(validation.type) && (userForm.get('remarks').dirty || userForm.get('remarks').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <div style="width: 100px">
+        <button type="submit">Transfer Ether</button>
+      </div>
+    </div>
+  </div>
+</form>

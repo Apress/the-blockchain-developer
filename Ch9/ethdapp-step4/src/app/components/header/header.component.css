@@ -1,0 +1,20 @@
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+li {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 25px;
+  padding: 5px;
+}
+.nav>li>a {
+  margin-bottom: 0;
+  padding-left: 0;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+}

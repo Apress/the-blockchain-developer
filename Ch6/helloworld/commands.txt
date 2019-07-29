@@ -1,0 +1,43 @@
+> rm -rf ~/eosio-wallet
+> cleos wallet create --to-console
+> cleos wallet open
+> cleos wallet unlock --password [DEFAULT_MASTER_KEY]
+> cleos create key --to-console
+> cleos create key --to-console
+> cleos wallet import --private-key [PRIVATE_KEY_1]
+> cleos wallet import --private-key [PRIVATE_KEY_2]
+> cleos wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+> cleos wallet keys
+> cleos create account eosio myaccount [EOS* OWNER_KEY] [EOS* ACTIVE_KEY]
+
+> cleos create account eosio hello_world [public key]
+> cleos create account eosio john [public key]
+
+> rm -rf ~/Desktop/eos/contracts/hello_world
+> cd ~/Desktop/eos/contracts/
+> mkdir hello_world
+> cd hello_world
+> vim hello_world.cpp
+
+#include <eosiolib/eosio.hpp>
+#include <eosiolib/print.hpp>
+
+using namespace eosio;
+
+class hello_world : public contract {
+  public:
+      using contract::contract;
+
+      [[eosio::action]]
+      void hi( name user ) {
+         print( "hello world: ", user);
+      }
+};
+
+EOSIO_DISPATCH( hello_world, (hi))
+
+> eosio-cpp -o hello_world.wasm hello_world.cpp --abigen
+> python rc/abi_to_rc.py helloworld.abi
+> > nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin --delete-all-blocks --delete-state-history --hard-replay --contracts-console
+> cleos set contract hello_world ~/Desktop/eos/contracts/hello_world -p hello_world@active
+> cleos push action hello_world hi '["john"]' -p john@active

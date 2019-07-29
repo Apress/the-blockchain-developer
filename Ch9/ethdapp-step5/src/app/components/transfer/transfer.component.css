@@ -1,0 +1,7 @@
+.transfer-container {
+  display: flex;
+  flex-direction: column;
+}
+.transfer-container > * {
+  width: 100%;
+}

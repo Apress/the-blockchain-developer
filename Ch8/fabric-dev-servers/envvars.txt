@@ -1,0 +1,21 @@
+COMPOSER_CARD=admin@hello-network
+COMPOSER_NAMESPACES=never
+COMPOSER_AUTHENTICATION=true
+COMPOSER_MULTIUSER=true
+COMPOSER_PROVIDERS='{
+  "jwt": {
+    "provider": "jwt",
+    "module": "/home/composer/node_modules/custom-jwt.js",
+    "secretOrKey": "gSi4WmttWuvy2ewoTGooigPwSDoxwZOy",
+    "authScheme": "saml",
+    "successRedirect": "/",
+    "failureRedirect":"/"
+    }
+}'
+COMPOSER_DATASOURCES='{
+  "db": {
+    "name": "db",
+    "connector": "mongodb",
+    "host": "mongo"
+  }
+}'

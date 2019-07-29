@@ -1,0 +1,18 @@
+eth.syncing
+eth.blockNumber
+eth.getBalance(eth.accounts[0])
+b3
+eth.accounts
+miner.start()
+eth.blockNumber
+eth.getBalance(eth.accounts[0])
+miner.stop()
+loadScript("remix/HelloWorldContract.js")
+miner.start()
+geth –help
+geth --help
+geth -help
+geth help
+help
+eth.pendingTransactions
+geth removedb

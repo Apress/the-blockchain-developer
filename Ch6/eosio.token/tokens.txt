@@ -1,0 +1,13 @@
+# create accounts:
+> cleos create account eosio eosio.token [public key]
+> cleos create account eosio jane [public key]
+
+# Generate tokens and transfer
+> cleos wallet unlock --password [DEFAULT_MASTER_KEY]
+> cleos push action eosio.token create '[ "eosio", "20000000.0000 TOKEN"]' -p eosio.token@active
+> cleos get currency stats eosio.token TOKEN
+> cleos push action eosio.token issue '[ "jane", "500.0000 TOKEN", "move tokens to Jane" ]' -p eosio@active
+> cleos get currency balance eosio.token jane TOKEN
+> cleos push action eosio.token transfer '[ "jane", "john", "100.0000 TOKEN", "transfer tokens" ]' -p jane@active
+> cleos get currency balance eosio.token jane TOKEN
+> cleos get currency balance eosio.token john TOKEN
