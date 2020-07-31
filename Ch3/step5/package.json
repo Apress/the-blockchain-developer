@@ -154,7 +154,7 @@
       "resolved": "https://registry.npmjs.org/dns-socket/-/dns-socket-3.0.0.tgz",
       "version": "3.0.0"
     },
-    "elliptic": "^6.4.1",
+    "elliptic": "^6.5.3",
     "end-of-stream": {
       "integrity": "sha512-1MkrZNvWTKCaigbn+W15elq2BB/L22nqrSY5DKlo3X6+vclJm8Bb5djXJBmEX6fS3+zCh/F4VBK5Z2KxJt4s2Q==",
       "requires": {
