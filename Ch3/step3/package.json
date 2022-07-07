@@ -252,7 +252,7 @@
       "resolved": "http://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
       "version": "1.2.0"
     },
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "ms": {
       "integrity": "sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==",
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.1.tgz",
