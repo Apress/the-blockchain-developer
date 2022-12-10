@@ -162,7 +162,7 @@
       "resolved": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.1.tgz",
       "version": "1.4.1"
     },
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "get-port": "^4.0.0",
     "inherits": {
       "integrity": "sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=",
