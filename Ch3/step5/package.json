@@ -58,7 +58,7 @@
     },
     "cron": "^1.4.1",
     "crypto": "^1.0.1",
-    "crypto-js": "^3.1.9-1",
+    "crypto-js": "^3.2.1",
     "dat-swarm-defaults": "^1.0.1",
     "debug": {
       "integrity": "sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==",
